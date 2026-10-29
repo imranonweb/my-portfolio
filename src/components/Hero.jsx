@@ -47,8 +47,8 @@ export default function Hero() {
           <p className="designation">{profile.designation}</p>
           <Rotator />
           <p className="lead">
-            CSE student and competitive programmer who ships full-stack products and keeps the
-            algorithms sharp. Scroll down for my live contest ratings and the projects behind them.
+            MERN stack &amp; full-stack developer building scalable web applications while actively
+            learning Machine Learning and AI — backed by strong DSA and competitive programming roots.
           </p>
           <div className="cta-row">
             <a ref={primary} className="btn btn-sun" href={profile.resume} target="_blank" rel="noreferrer">
@@ -71,9 +71,9 @@ export default function Hero() {
           <figure className="arch">
             <img src={profile.photo} alt={`${profile.name}, ${profile.designation}`} width="900" height="1203" fetchPriority="high" />
           </figure>
-          <span className="sticker st-1">MERN</span>
-          <span className="sticker st-2">C++ · DSA</span>
-          <span className="sticker st-3">AI / ML</span>
+          <span className="sticker st-1">MERN Stack</span>
+          <span className="sticker st-2">Learning ML</span>
+          <span className="sticker st-3">Next.js · C++</span>
           <p className="ribbon lang-bn" lang="bn">{profile.bangla}</p>
           <p className="status"><i /> Open to work</p>
         </div>

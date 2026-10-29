@@ -10,31 +10,35 @@ export default function About() {
         <div className="about-grid">
           <Reveal variant="left" className="about-statement">
             <p>
-              Competitive programmer first.
+              <span>Full stack developer</span> building with MERN.
               <br />
-              <span>Full stack developer</span> by practice.
+              Exploring <em>Machine Learning</em> &amp; AI.
             </p>
           </Reveal>
 
           <div className="about-body">
             <Reveal as="p" delay={60}>
               I&apos;m <strong>Md. Al Imran Emon</strong>, a CSE student at{' '}
-              <strong>Green University of Bangladesh</strong>, known in the tech community as{' '}
-              <strong>imranonweb</strong>.
+              <strong>Green University of Bangladesh</strong>, focused on{' '}
+              <strong>Full Stack Web Development</strong> and <strong>Machine Learning</strong>.
             </Reveal>
             <Reveal as="p" delay={120}>
-              I&apos;m passionate about <strong>competitive programming</strong>, with a strong foundation
-              in <strong>DSA and C++</strong>, actively solving problems on Codeforces and CodeChef.
-              Currently, I&apos;m learning <strong>MERN stack development</strong> through Programming Hero
-              while exploring <strong>AI/ML, machine learning research, and backend engineering</strong>.
+              My primary work is building end-to-end web applications with the{' '}
+              <strong>MERN stack (MongoDB, Express.js, React, Node.js)</strong> and{' '}
+              <strong>Next.js</strong> — crafting fast, responsive interfaces backed by clean APIs and
+              relational or document databases. Alongside full-stack development, I&apos;m actively
+              learning <strong>Machine Learning and AI</strong>, training predictive models and
+              shipping explainable ML applications in Python.
             </Reveal>
             <Reveal as="p" delay={180}>
-              As the <strong>Programming Lead of GUCC</strong>, I enjoy building real-world projects,
-              solving problems, and continuously growing toward my goal of becoming a{' '}
-              <strong>Software Engineer specializing in scalable systems and AI-driven solutions</strong>.
+              My engineering work is grounded in a strong foundation in{' '}
+              <strong>DSA and C++</strong> through competitive programming on Codeforces, CodeChef,
+              and LeetCode. As the <strong>Programming Lead of GUCC</strong>, I enjoy shipping
+              real-world products, mentoring fellow students, and growing toward my goal of becoming a{' '}
+              <strong>Software Engineer specializing in scalable full-stack systems and AI-driven solutions</strong>.
             </Reveal>
             <Reveal as="p" delay={220}>
-              Outside of programming, I enjoy playing and watching football, strategizing over chess matches, exploring tech articles, and mentoring fellow students in competitive programming. I bring a curious, persistent, and collaborative spirit to every team and project I undertake.
+              Outside of programming, I enjoy playing and watching football, strategizing over chess matches, exploring tech articles, and mentoring fellow students in problem solving. I bring a curious, persistent, and collaborative spirit to every team and project I undertake.
             </Reveal>
 
             <ul className="now">

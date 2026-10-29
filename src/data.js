@@ -1,8 +1,8 @@
 import {
   SiReact, SiNextdotjs, SiRedux, SiTailwindcss,
-  SiNodedotjs, SiPostgresql, SiPrisma, SiMongodb,
+  SiNodedotjs, SiExpress, SiPostgresql, SiPrisma, SiMongodb,
   SiSupabase, SiGraphql, SiTypescript, SiJavascript, SiMysql, SiCplusplus,
-  SiGit, SiDocker, SiVercel, SiPython, SiScikitlearn, SiStreamlit,
+  SiGit, SiDocker, SiVercel, SiPython, SiScikitlearn, SiPandas, SiStreamlit,
 } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa'
 
@@ -22,7 +22,7 @@ export const profile = {
   githubUrl: 'https://github.com/imranonweb',
 }
 
-export const roles = ['scalable web apps', 'AI-driven solutions', 'clean, fast algorithms', 'things people actually use']
+export const roles = ['MERN stack web apps', 'scalable full-stack systems', 'applied ML & AI solutions', 'fast, accessible interfaces']
 
 export const socials = [
   { name: 'GitHub', url: 'https://github.com/imranonweb', icon: 'github' },
@@ -40,55 +40,56 @@ export const platforms = [
 ]
 
 export const currently = [
-  { label: 'Learning', text: 'MERN stack through Programming Hero' },
-  { label: 'Exploring', text: 'AI/ML research and backend engineering' },
-  { label: 'Practising', text: 'DSA in C++ on Codeforces and CodeChef' },
+  { label: 'Focus', text: 'Full-stack web development with the MERN stack & Next.js' },
+  { label: 'Learning', text: 'Machine Learning, predictive modelling & AI-driven systems' },
+  { label: 'Foundation', text: 'Data Structures & Algorithms in C++ on Codeforces & CodeChef' },
 ]
 
 export const skills = [
   {
-    category: 'Languages & Core CS',
+    category: 'Frontend Engineering',
     tone: 'marigold',
     items: [
-      { name: 'C++', icon: SiCplusplus, color: '#4db3ff', grade: 'Core', level: 5, evidence: 'STL, graph algorithms & rated CP contests' },
-      { name: 'JavaScript (ES6+)', icon: SiJavascript, color: '#F7DF1E', grade: 'Core', level: 5, evidence: 'Async runtime, DOM & full-stack web apps' },
-      { name: 'TypeScript', icon: SiTypescript, color: '#4a9dff', grade: 'Production', level: 4, evidence: 'Typed data contracts in BazarDor' },
-      { name: 'Python', icon: SiPython, color: '#ffd43b', grade: 'Production', level: 4, evidence: 'ML pipelines, feature engineering & SHAP' },
-      { name: 'SQL', icon: SiMysql, color: '#5fa8d8', grade: 'Production', level: 4, evidence: 'Relational schemas, joins & RLS policies' },
-      { name: 'Java', icon: FaJava, color: '#ff9f3a', grade: 'Working', level: 3, evidence: 'OOP & socket-based P2P file transfer' },
-    ],
-  },
-  {
-    category: 'Frontend Engineering',
-    tone: 'vermilion',
-    items: [
-      { name: 'React 19', icon: SiReact, color: '#61DAFB', grade: 'Core', level: 5, evidence: 'Component architecture, hooks & E-Health UI' },
-      { name: 'Next.js (App Router)', icon: SiNextdotjs, color: '#f7eddb', grade: 'Production', level: 4, evidence: 'Server/Client Components & BazarDor' },
-      { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#38BDF8', grade: 'Core', level: 5, evidence: 'Design tokens, OKLCH themes & responsive UI' },
+      { name: 'React 19', icon: SiReact, color: '#61DAFB', grade: 'Core', level: 5, evidence: 'Component architecture, custom hooks & E-Health SPA' },
+      { name: 'JavaScript (ES6+)', icon: SiJavascript, color: '#F7DF1E', grade: 'Core', level: 5, evidence: 'Async runtime, DOM & full-stack MERN applications' },
+      { name: 'Next.js (App Router)', icon: SiNextdotjs, color: '#f7eddb', grade: 'Production', level: 4, evidence: 'Server/Client Components & BazarDor platform' },
+      { name: 'TypeScript', icon: SiTypescript, color: '#4a9dff', grade: 'Production', level: 4, evidence: 'Typed API contracts & end-to-end safety' },
+      { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#38BDF8', grade: 'Core', level: 5, evidence: 'Design tokens, responsive layouts & dark UI systems' },
       { name: 'Redux', icon: SiRedux, color: '#9d7bff', grade: 'Working', level: 3, evidence: 'Predictable client state management' },
     ],
   },
   {
-    category: 'Backend & Databases',
+    category: 'Backend & Databases (MERN)',
     tone: 'teal',
     items: [
-      { name: 'Node.js & Express', icon: SiNodedotjs, color: '#6cc24a', grade: 'Production', level: 4, evidence: 'REST APIs, auth flows & server routing' },
-      { name: 'PostgreSQL', icon: SiPostgresql, color: '#6aa3e8', grade: 'Production', level: 4, evidence: 'Row-Level Security & clinical records' },
-      { name: 'MongoDB Atlas', icon: SiMongodb, color: '#47c26b', grade: 'Production', level: 4, evidence: 'Replica sets & market price persistence' },
+      { name: 'Node.js & Express.js', icon: SiExpress, color: '#6cc24a', grade: 'Core', level: 5, evidence: 'REST APIs, auth middleware & full-stack server routing' },
+      { name: 'MongoDB Atlas', icon: SiMongodb, color: '#47c26b', grade: 'Production', level: 4, evidence: 'Document schemas, replica sets & market price persistence' },
+      { name: 'PostgreSQL', icon: SiPostgresql, color: '#6aa3e8', grade: 'Production', level: 4, evidence: 'Row-Level Security & relational clinical records' },
       { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E', grade: 'Production', level: 4, evidence: 'Auth, role guards & private document storage' },
-      { name: 'Prisma', icon: SiPrisma, color: '#9fb1d6', grade: 'Working', level: 3, evidence: 'Type-safe ORM & schema migrations' },
+      { name: 'Prisma ORM', icon: SiPrisma, color: '#9fb1d6', grade: 'Working', level: 3, evidence: 'Type-safe database queries & schema migrations' },
       { name: 'GraphQL', icon: SiGraphql, color: '#ff3fb0', grade: 'Working', level: 3, evidence: 'Typed schemas, queries & resolvers' },
     ],
   },
   {
-    category: 'AI / ML & Cloud Tooling',
+    category: 'Machine Learning & AI',
     tone: 'magenta',
     items: [
+      { name: 'Python', icon: SiPython, color: '#ffd43b', grade: 'Production', level: 4, evidence: 'ML workflows, data pipelines & model evaluation' },
       { name: 'scikit-learn & XGBoost', icon: SiScikitlearn, color: '#ff9f43', grade: 'Production', level: 4, evidence: '5-classifier churn benchmark & stratified CV' },
-      { name: 'Streamlit & SHAP', icon: SiStreamlit, color: '#ff6b6b', grade: 'Production', level: 4, evidence: 'Explainable AI web app (ChurnIQ)' },
-      { name: 'Git & GitHub', icon: SiGit, color: '#ff6b45', grade: 'Core', level: 5, evidence: 'Version control across 48 public repositories' },
-      { name: 'Docker', icon: SiDocker, color: '#3aa0ff', grade: 'Working', level: 3, evidence: 'Containerized services & reproducible builds' },
+      { name: 'Pandas & NumPy', icon: SiPandas, color: '#4dabf7', grade: 'Production', level: 4, evidence: 'Feature engineering, EDA & leakage-free preprocessing' },
+      { name: 'Streamlit & SHAP', icon: SiStreamlit, color: '#ff6b6b', grade: 'Production', level: 4, evidence: 'Explainable AI deployment (ChurnIQ web app)' },
+    ],
+  },
+  {
+    category: 'Core CS, Languages & DevOps',
+    tone: 'vermilion',
+    items: [
+      { name: 'C++ (DSA & CP)', icon: SiCplusplus, color: '#4db3ff', grade: 'Core', level: 5, evidence: 'STL, graph algorithms & rated competitive programming' },
+      { name: 'SQL', icon: SiMysql, color: '#5fa8d8', grade: 'Production', level: 4, evidence: 'Relational schemas, joins & query optimization' },
+      { name: 'Git & GitHub', icon: SiGit, color: '#ff6b45', grade: 'Core', level: 5, evidence: 'Version control across 48+ public repositories' },
       { name: 'Vercel & Cloud', icon: SiVercel, color: '#f7eddb', grade: 'Production', level: 4, evidence: 'Edge deployments, serverless functions & CI' },
+      { name: 'Docker', icon: SiDocker, color: '#3aa0ff', grade: 'Working', level: 3, evidence: 'Containerized services & reproducible builds' },
+      { name: 'Java', icon: FaJava, color: '#ff9f3a', grade: 'Working', level: 3, evidence: 'OOP & socket-based P2P file transfer' },
     ],
   },
 ]
