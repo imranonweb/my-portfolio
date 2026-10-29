@@ -1,44 +1,60 @@
 import { Link } from 'react-router-dom'
 import { FaArrowRight, FaArrowUpRightFromSquare, FaGithub } from 'react-icons/fa6'
 import { projects } from '../data.js'
-import { useTilt } from '../hooks/motion.js'
 import Reveal from './Reveal.jsx'
 import SectionHead from './SectionHead.jsx'
 import ProjectImage from './ProjectImage.jsx'
 
 function Card({ p, index }) {
-  const tilt = useTilt(6)
   return (
-    <Reveal variant={index === 1 ? 'up' : index === 0 ? 'left' : 'right'} delay={index * 90} className="pcard-wrap">
-      <article
-        className={`pcard tone-${p.tone}`}
-        ref={tilt.ref}
-        onPointerMove={tilt.onPointerMove}
-        onPointerLeave={tilt.onPointerLeave}
-      >
-        <Link to={`/projects/${p.slug}`} className="pcard-shot" aria-label={`${p.name} details`} tabIndex={-1}>
+    <Reveal variant="up" delay={index * 70} className="pcard-wrap">
+      <article className={`pcard tone-${p.tone}`}>
+        <Link to={`/projects/${p.slug}`} className="pcard-shot" aria-label={`${p.name} case study`} tabIndex={-1}>
           <ProjectImage src={p.image} name={p.name} />
           <span className="pcard-kind">{p.kind}</span>
         </Link>
         <div className="pcard-body">
           <h3>
             {p.name}
-            <small className={p.native.match(/[ঀ-৿]/) ? 'lang-bn' : ''}>{p.native}</small>
+            <small className={/[ঀ-৿]/.test(p.native) ? 'lang-bn' : ''}>{p.native}</small>
           </h3>
-          <p>{p.summary}</p>
-          <ul className="chips">
-            {p.stack.slice(0, 4).map((s) => (
+          <p className="pcard-summary">{p.summary}</p>
+          <dl className="pcard-meta">
+            <div>
+              <dt>What I built</dt>
+              <dd>{p.built}</dd>
+            </div>
+            <div>
+              <dt>Key engineering highlight</dt>
+              <dd>{p.challenges[0]}</dd>
+            </div>
+          </dl>
+          <ul className="chips" aria-label="Technologies used">
+            {p.stack.map((s) => (
               <li key={s}>{s}</li>
             ))}
           </ul>
           <div className="pcard-actions">
             <Link className="btn btn-sun" to={`/projects/${p.slug}`}>
-              View details <FaArrowRight aria-hidden="true" />
+              Case Study <FaArrowRight aria-hidden="true" />
             </Link>
-            <a className="icon-btn" href={p.live} target="_blank" rel="noreferrer" aria-label={`${p.name} live site`} title="Live site">
-              <FaArrowUpRightFromSquare aria-hidden="true" />
+            <a
+              className="btn btn-line pcard-link"
+              href={p.live}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${p.name} live demo`}
+            >
+              Live <FaArrowUpRightFromSquare aria-hidden="true" />
             </a>
-            <a className="icon-btn" href={p.github} target="_blank" rel="noreferrer" aria-label={`${p.name} repository`} title="GitHub repository">
+            <a
+              className="icon-btn"
+              href={p.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${p.name} GitHub repository`}
+              title="GitHub repository"
+            >
               <FaGithub aria-hidden="true" />
             </a>
           </div>
@@ -55,7 +71,7 @@ export default function Projects() {
         <SectionHead
           title="Selected"
           accent="projects"
-          sub="Three things I built end to end. Each opens a detail page with the stack, the live site, the client repository, what went wrong and what comes next."
+          sub="Full-stack web applications and applied machine-learning work — each with a live deployment, public source code, and an engineering breakdown."
         />
         <div className="pgrid">
           {projects.map((p, i) => (
@@ -66,4 +82,3 @@ export default function Projects() {
     </section>
   )
 }
-

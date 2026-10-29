@@ -2,46 +2,49 @@ import { skills } from '../data.js'
 import Reveal from './Reveal.jsx'
 import SectionHead from './SectionHead.jsx'
 
-const SEGMENTS = [1, 2, 3, 4, 5]
-
 export default function Skills() {
   return (
     <section id="skills" className="section">
       <div className="wrap">
         <SectionHead
-          title="Engineering"
+          title="Technical"
           accent="skills"
-          sub="Professionally graded by depth of production and contest use: Core (daily driver, 5/5), Production (shipped in live apps, 4/5), and Working (applied in coursework and prototypes, 3/5)."
+          sub="Focused on the tools and foundations demonstrated across my shipped web applications, machine-learning pipeline, and university coursework."
         />
-        <div className="plates">
+        <div className="plates plates-three">
           {skills.map((g, gi) => (
             <Reveal
               key={g.category}
-              variant={gi % 2 ? 'right' : 'left'}
-              delay={gi * 70}
+              variant="up"
+              delay={gi * 60}
               className={`plate-card tone-${g.tone}`}
             >
               <div className="plate-head">
-                <h3>{g.category}</h3>
-                <span className="plate-count">{g.items.length} skills</span>
+                <div>
+                  <h3>{g.category}</h3>
+                  {g.subtitle && <p className="plate-sub">{g.subtitle}</p>}
+                </div>
               </div>
               <ul className="skill-ledger">
-                {g.items.map(({ name, icon: Icon, color, grade, level, evidence }, i) => (
+                {g.items.map(({ name, icon: Icon, color, tag, note }, i) => (
                   <li key={name} className="skill-row" style={{ '--c': color, '--i': i }}>
                     <div className="skill-main">
                       <Icon className="skill-ico" aria-hidden="true" />
                       <div className="skill-copy">
-                        <span className="skill-name">{name}</span>
-                        <span className="skill-ev">{evidence}</span>
+                        <div className="skill-title-line">
+                          <span className="skill-name">{name}</span>
+                          {tag && (
+                            <span
+                              className={`skill-badge ${
+                                tag === 'Exploring' ? 'skill-badge-muted' : 'skill-badge-solid'
+                              }`}
+                            >
+                              {tag}
+                            </span>
+                          )}
+                        </div>
+                        <span className="skill-ev">{note}</span>
                       </div>
-                    </div>
-                    <div className="skill-grade" aria-label={`${grade} proficiency, ${level} of 5`}>
-                      <span className={`grade-tag grade-${grade.toLowerCase()}`}>{grade}</span>
-                      <span className="grade-bars" aria-hidden="true">
-                        {SEGMENTS.map((n) => (
-                          <i key={n} className={n <= level ? 'on' : ''} />
-                        ))}
-                      </span>
                     </div>
                   </li>
                 ))}

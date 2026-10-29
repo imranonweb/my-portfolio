@@ -1,5 +1,13 @@
+import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaGithub } from 'react-icons/fa6'
+import {
+  FaArrowLeft,
+  FaArrowRight,
+  FaArrowUpRightFromSquare,
+  FaGithub,
+  FaExpand,
+  FaCompress,
+} from 'react-icons/fa6'
 import { projects } from '../data.js'
 import Reveal from '../components/Reveal.jsx'
 import Garland from '../components/Garland.jsx'
@@ -7,6 +15,7 @@ import ProjectImage from '../components/ProjectImage.jsx'
 
 export default function ProjectDetail() {
   const { slug } = useParams()
+  const [expanded, setExpanded] = useState(false)
   const index = projects.findIndex((x) => x.slug === slug)
   const p = projects[index]
 
@@ -41,30 +50,65 @@ export default function ProjectDetail() {
           </p>
           <div className="d-actions">
             <a className="btn btn-sun" href={p.live} target="_blank" rel="noreferrer">
-              <FaArrowUpRightFromSquare aria-hidden="true" /> Live project
+              <FaArrowUpRightFromSquare aria-hidden="true" /> Live Demo
             </a>
             <a className="btn btn-line" href={p.github} target="_blank" rel="noreferrer">
-              <FaGithub aria-hidden="true" /> GitHub repository
+              <FaGithub aria-hidden="true" /> GitHub Repository
             </a>
           </div>
         </header>
 
-        <Reveal variant="scale" className="browser">
+        <Reveal variant="scale" className={`browser ${expanded ? 'is-expanded' : ''}`}>
           <div className="browser-bar">
-            <i /><i /><i />
-            <span>{p.live.replace(/^https?:\/\//, '')}</span>
+            <div className="browser-dots" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+            </div>
+            <a
+              className="browser-url"
+              href={p.live}
+              target="_blank"
+              rel="noreferrer"
+              title="Open live project"
+            >
+              <span>{p.live.replace(/^https?:\/\//, '')}</span>
+              <FaArrowUpRightFromSquare aria-hidden="true" />
+            </a>
+            <button
+              type="button"
+              className="browser-toggle"
+              onClick={() => setExpanded(!expanded)}
+              aria-label={expanded ? 'Fit image to frame' : 'Show full image dimensions'}
+              title={expanded ? 'Fit image to viewport' : 'Expand full height'}
+            >
+              {expanded ? <FaCompress aria-hidden="true" /> : <FaExpand aria-hidden="true" />}
+              <span>{expanded ? 'Fit view' : 'Dynamic view'}</span>
+            </button>
           </div>
-          <ProjectImage src={p.image} name={p.name} eager />
+          <div className="browser-stage">
+            <ProjectImage src={p.image} name={p.name} eager className="case-study-img" />
+          </div>
         </Reveal>
 
         <div className="d-grid">
-          <Reveal as="section" variant="up" className="d-block d-wide">
-            <h2>Description</h2>
+          <Reveal as="section" variant="up" className="d-block">
+            <h2>Problem It Solves</h2>
+            <p>{p.problem}</p>
+          </Reveal>
+
+          <Reveal as="section" variant="up" delay={60} className="d-block">
+            <h2>What I Built</h2>
+            <p>{p.built}</p>
+          </Reveal>
+
+          <Reveal as="section" variant="up" delay={90} className="d-block d-wide">
+            <h2>Architecture &amp; Overview</h2>
             <p>{p.description}</p>
           </Reveal>
 
-          <Reveal as="section" variant="up" delay={80} className="d-block">
-            <h2>Main technology stack</h2>
+          <Reveal as="section" variant="up" delay={110} className="d-block d-wide">
+            <h2>Technologies Used</h2>
             <ul className="chips big">
               {p.stack.map((s) => (
                 <li key={s}>{s}</li>
@@ -73,7 +117,7 @@ export default function ProjectDetail() {
           </Reveal>
 
           <Reveal as="section" variant="left" className="d-block">
-            <h2>Challenges faced</h2>
+            <h2>Technical Decisions &amp; Challenges</h2>
             <ul className="d-list">
               {p.challenges.map((c) => (
                 <li key={c}>{c}</li>
@@ -82,7 +126,7 @@ export default function ProjectDetail() {
           </Reveal>
 
           <Reveal as="section" variant="right" className="d-block">
-            <h2>Future plans &amp; improvements</h2>
+            <h2>Planned Improvements</h2>
             <ul className="d-list">
               {p.future.map((c) => (
                 <li key={c}>{c}</li>

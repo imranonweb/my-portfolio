@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import snapshot from '../snapshot.json'
 import { fetchCodeforces, fetchCodechef, fetchLeetCode } from '../lib/platforms.js'
 
-const KEY = 'portfolio-stats-v2'
+const KEY = 'portfolio-stats-v3'
 const TTL = 30 * 60 * 1000
 const sources = { codeforces: fetchCodeforces, codechef: fetchCodechef, leetcode: fetchLeetCode }
 
@@ -19,8 +19,16 @@ function initial() {
   const out = {}
   for (const k of Object.keys(sources)) {
     const c = cache[k]
-    if (c && Date.now() - c.at < TTL) out[k] = { data: c.data, status: 'live', at: c.at }
-    else out[k] = { data: c?.data ?? snapshot[k], status: 'syncing', at: c?.at ?? snapAt, fromSnapshot: !c }
+    if (c && c.data && Date.now() - c.at < TTL) {
+      out[k] = { data: c.data, status: 'cached', at: c.at }
+    } else {
+      out[k] = {
+        data: c?.data ?? snapshot[k],
+        status: 'syncing',
+        at: c?.at ?? snapAt,
+        fromSnapshot: !c,
+      }
+    }
   }
   return out
 }
@@ -47,7 +55,13 @@ export function StatsProvider({ children }) {
         })
         .catch(() => {
           if (!alive) return
-          setState((s) => ({ ...s, [key]: { ...s[key], status: 'snapshot' } }))
+          setState((s) => ({
+            ...s,
+            [key]: {
+              ...s[key],
+              status: s[key].status === 'cached' ? 'cached' : 'snapshot',
+            },
+          }))
         })
     }
     return () => {
@@ -63,4 +77,3 @@ export function StatsProvider({ children }) {
 export function useStats() {
   return useContext(StatsContext)
 }
-

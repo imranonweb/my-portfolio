@@ -44,69 +44,34 @@ async function getJson(url, { timeout = 9000 } = {}) {
 /* ───────────── Codeforces (public API, CORS-enabled) ───────────── */
 export async function fetchCodeforces(handle = HANDLE) {
   const base = 'https://codeforces.com/api'
-  const [info, rating] = await Promise.all([
-    getJson(`${base}/user.info?handles=${handle}`),
-    getJson(`${base}/user.rating?handle=${handle}`),
-  ])
-  if (info.status !== 'OK' || rating.status !== 'OK') throw new Error('codeforces api')
+  const info = await getJson(`${base}/user.info?handles=${handle}`)
+  if (info.status !== 'OK' || !info.result?.length) throw new Error('codeforces api')
   const u = info.result[0]
-  const history = rating.result.map((r) => ({
-    t: r.ratingUpdateTimeSeconds * 1000,
-    rating: r.newRating,
-    prev: r.oldRating,
-    name: r.contestName,
-    rank: r.rank,
-  }))
-
-  let solved = null
-  try {
-    const status = await getJson(`${base}/user.status?handle=${handle}&from=1&count=5000`, { timeout: 12000 })
-    if (status.status === 'OK') {
-      solved = new Set(
-        status.result
-          .filter((s) => s.verdict === 'OK')
-          .map((s) => `${s.problem.contestId}-${s.problem.index}`),
-      ).size
-    }
-  } catch {
-    /* solved count is optional */
-  }
-
   const title = (u.rank || 'unrated').replace(/\b\w/g, (c) => c.toUpperCase())
   return {
     rating: u.rating ?? 0,
     peak: u.maxRating ?? u.rating ?? 0,
     title,
     peakTitle: (u.maxRank || '').replace(/\b\w/g, (c) => c.toUpperCase()),
-    contests: history.length,
-    solved,
-    history,
   }
 }
 
 /* ───────────── LeetCode (community API, CORS-enabled) ───────────── */
 export async function fetchLeetCode(handle = HANDLE) {
   const base = 'https://alfa-leetcode-api.onrender.com'
-  const [contest, solved] = await Promise.all([
-    getJson(`${base}/${handle}/contest`, { timeout: 20000 }),
-    getJson(`${base}/${handle}/solved`, { timeout: 20000 }),
-  ])
+  const contest = await getJson(`${base}/${handle}/contest`, { timeout: 15000 })
   const history = (contest.contestParticipation || [])
     .filter((c) => c.attended)
     .map((c) => ({
       t: c.contest.startTime * 1000,
       rating: Math.round(c.rating),
-      name: c.contest.title,
-      rank: c.ranking,
     }))
+  const rating = Math.round(contest.contestRating || 0)
   return {
-    rating: Math.round(contest.contestRating || 0),
-    peak: history.length ? Math.max(...history.map((h) => h.rating)) : Math.round(contest.contestRating || 0),
-    title: contest.contestTopPercentage ? `Top ${Number(contest.contestTopPercentage).toFixed(0)}%` : 'Unrated',
+    rating,
+    peak: history.length ? Math.max(...history.map((h) => h.rating)) : rating,
+    title: contest.contestTopPercentage ? `Top ${Number(contest.contestTopPercentage).toFixed(0)}%` : 'Rated',
     contests: contest.contestAttend ?? history.length,
-    solved: solved.solvedProblem ?? null,
-    breakdown: { easy: solved.easySolved, medium: solved.mediumSolved, hard: solved.hardSolved },
-    history,
   }
 }
 
