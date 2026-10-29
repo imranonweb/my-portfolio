@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T22:46:00.000Z",
+  "title": "Design System: Md. Al Imran Emon — Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "marigold": {
+        "role": "primary",
+        "displayName": "Rickshaw Marigold",
+        "canonical": "#ffb92e",
+        "tonalRamp": ["#332200", "#593c00", "#8c6000", "#bf850a", "#ffb92e", "#ffc95c", "#ffdd94", "#fff3d6"]
+      },
+      "vermilion": {
+        "role": "primary",
+        "displayName": "Sindoor Vermilion",
+        "canonical": "#ff4d2e",
+        "tonalRamp": ["#360b03", "#611507", "#96220d", "#cc3116", "#ff4d2e", "#ff775e", "#ffa999", "#ffe2dc"]
+      },
+      "teal": {
+        "role": "secondary",
+        "displayName": "Peacock Teal",
+        "canonical": "#1fd1bd",
+        "tonalRamp": ["#052e29", "#0a524a", "#117d71", "#17a898", "#1fd1bd", "#54e0d0", "#91ede2", "#d6f9f5"]
+      },
+      "magenta": {
+        "role": "secondary",
+        "displayName": "Lotus Magenta",
+        "canonical": "#ff4d94",
+        "tonalRamp": ["#38081c", "#631033", "#991b4f", "#cf296e", "#ff4d94", "#ff7ab0", "#ffadd0", "#ffe0ed"]
+      },
+      "leaf": {
+        "role": "tertiary",
+        "displayName": "Betel Leaf Green",
+        "canonical": "#7ee06a",
+        "tonalRamp": ["#112e0b", "#1f5215", "#327d22", "#4aa836", "#7ee06a", "#9ce88c", "#bfeeb5", "#e6f9e2"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Midnight Ink",
+        "canonical": "#0e0b15",
+        "tonalRamp": ["#0e0b15", "#151120", "#1d1830", "#2b2445", "#473d6b", "#6f6494", "#a399c2", "#ded9ed"]
+      },
+      "ink-raised": {
+        "role": "neutral",
+        "displayName": "Raised Ink",
+        "canonical": "#151120",
+        "tonalRamp": ["#0e0b15", "#151120", "#1d1830", "#2b2445", "#473d6b", "#6f6494", "#a399c2", "#ded9ed"]
+      },
+      "ink-well": {
+        "role": "neutral",
+        "displayName": "Well Ink",
+        "canonical": "#1d1830",
+        "tonalRamp": ["#0e0b15", "#151120", "#1d1830", "#2b2445", "#473d6b", "#6f6494", "#a399c2", "#ded9ed"]
+      },
+      "ink-ridge": {
+        "role": "neutral",
+        "displayName": "Ridge Ink",
+        "canonical": "#2b2445",
+        "tonalRamp": ["#0e0b15", "#151120", "#1d1830", "#2b2445", "#473d6b", "#6f6494", "#a399c2", "#ded9ed"]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Warm Cream",
+        "canonical": "#f7eddb",
+        "tonalRamp": ["#292318", "#4a402e", "#6e6149", "#94856b", "#b5aa9d", "#d6cbb7", "#ebe0cc", "#f7eddb"]
+      },
+      "cream-muted": {
+        "role": "neutral",
+        "displayName": "Parchment Cream",
+        "canonical": "#d6cbb7",
+        "tonalRamp": ["#292318", "#4a402e", "#6e6149", "#94856b", "#b5aa9d", "#d6cbb7", "#ebe0cc", "#f7eddb"]
+      },
+      "warm-stone": {
+        "role": "neutral",
+        "displayName": "Warm Stone",
+        "canonical": "#b5aa9d",
+        "tonalRamp": ["#292318", "#4a402e", "#6e6149", "#94856b", "#b5aa9d", "#d6cbb7", "#ebe0cc", "#f7eddb"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name headline at expressive scale." },
+      "headline": { "displayName": "Headline", "purpose": "Section headers paired with the SVG garland divider." },
+      "title": { "displayName": "Title", "purpose": "Project card titles, skill category headers, and academic stop titles." },
+      "body": { "displayName": "Body", "purpose": "Narrative paragraphs and project case studies (60–72ch)." },
+      "label": { "displayName": "Label / Tabular Mono", "purpose": "Live contest ratings, ranks, deltas, and skill grade tags." },
+      "bangla": { "displayName": "Bangla Script", "purpose": "Bengali ribbon nameplate and native project titles." }
+    },
+    "shadows": [
+      { "name": "button-lift", "value": "0 12px 24px -10px rgba(0, 0, 0, 0.65)", "purpose": "Primary and WhatsApp action button elevation." },
+      { "name": "plate-elevation", "value": "0 22px 44px -26px rgba(0, 0, 0, 0.75)", "purpose": "Enamel skill plates, education stops, and about statements." },
+      { "name": "scoreboard-depth", "value": "0 28px 56px -32px rgba(0, 0, 0, 0.8)", "purpose": "Live contest standings table and project browser frame." }
+    ],
+    "motion": [
+      { "name": "ease-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Exponential ease-out for physical entrance transforms and hover lifts." },
+      { "name": "ease-io", "value": "cubic-bezier(0.65, 0, 0.35, 1)", "purpose": "Symmetric easing for state transitions." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "900px" },
+      { "name": "lg", "value": "980px" },
+      { "name": "xl", "value": "1120px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Sun Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "High-contrast Rickshaw Marigold CTA button with Midnight Ink label.",
+      "html": "<a href=\"#\" class=\"ds-btn-sun\">View Resume</a>",
+      "css": ".ds-btn-sun { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 48px; padding: 12px 22px; border-radius: 14px; background: #ffb92e; color: #0e0b15; font-family: 'Figtree', sans-serif; font-weight: 700; font-size: 0.98rem; text-decoration: none; box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.65); transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s; } .ds-btn-sun:hover { background: #ffc94f; transform: translateY(-3px); } .ds-btn-sun:focus-visible { outline: 3px solid #ffb92e; outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action button with 2px cream perimeter border.",
+      "html": "<a href=\"#\" class=\"ds-btn-line\">Download</a>",
+      "css": ".ds-btn-line { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 48px; padding: 12px 22px; border-radius: 14px; border: 2px solid rgba(247, 237, 219, 0.22); background: transparent; color: #f7eddb; font-family: 'Figtree', sans-serif; font-weight: 700; font-size: 0.98rem; text-decoration: none; transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s, color 0.25s; } .ds-btn-line:hover { border-color: #ffb92e; color: #ffb92e; transform: translateY(-3px); } .ds-btn-line:focus-visible { outline: 3px solid #ffb92e; outline-offset: 3px; }"
+    },
+    {
+      "name": "Tech Stack Chip",
+      "kind": "chip",
+      "refersTo": "chip-stack",
+      "description": "Pill badge for project technologies.",
+      "html": "<span class=\"ds-chip\">Next.js 16</span>",
+      "css": ".ds-chip { display: inline-block; padding: 5px 13px; border-radius: 999px; border: 1px solid rgba(247, 237, 219, 0.22); background: rgba(247, 237, 219, 0.04); color: #d6cbb7; font-family: 'Figtree', sans-serif; font-size: 0.82rem; font-weight: 600; }"
+    },
+    {
+      "name": "Professionally Graded Skill Row",
+      "kind": "custom",
+      "refersTo": "card-plate",
+      "description": "Ledger row inside an enamel skill plate showing evidence, tier, and 5-segment gauge.",
+      "html": "<div class=\"ds-skill-row\"><div><div class=\"ds-skill-name\">C++</div><div class=\"ds-skill-ev\">STL, graph algorithms &amp; rated CP contests</div></div><div class=\"ds-skill-grade\"><span class=\"ds-grade-tag\">Core</span><span class=\"ds-bars\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i></span></div></div>",
+      "css": ".ds-skill-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 18px; background: #151120; border-bottom: 1px solid rgba(247, 237, 219, 0.12); color: #f7eddb; font-family: 'Figtree', sans-serif; } .ds-skill-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 1.04rem; } .ds-skill-ev { font-size: 0.84rem; color: #d6cbb7; } .ds-skill-grade { display: grid; justify-items: end; gap: 6px; } .ds-grade-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; font-weight: 700; color: #ffb92e; } .ds-bars { display: inline-flex; gap: 4px; } .ds-bars i { width: 12px; height: 6px; border-radius: 2px; background: rgba(247, 237, 219, 0.14); display: inline-block; } .ds-bars i.on { background: #4db3ff; }"
+    },
+    {
+      "name": "Academic Stamp Card",
+      "kind": "card",
+      "refersTo": "card-plate",
+      "description": "Enamel plate card with a monospace GPA/CGPA verification stamp.",
+      "html": "<div class=\"ds-card\"><div><h3 class=\"ds-card-title\">Green University of Bangladesh</h3><p class=\"ds-card-sub\">B.Sc. in Computer Science &amp; Engineering</p></div><div class=\"ds-stamp\"><small>CGPA</small><b>3.54</b></div></div>",
+      "css": ".ds-card { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 24px; border-radius: 22px; background: #151120; border: 2px solid rgba(247, 237, 219, 0.22); color: #f7eddb; font-family: 'Figtree', sans-serif; transition: border-color 0.25s; } .ds-card:hover { border-color: #ffb92e; } .ds-card-title { margin: 0 0 4px; font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.3rem; font-weight: 800; } .ds-card-sub { margin: 0; color: #d6cbb7; font-size: 0.98rem; } .ds-stamp { display: grid; justify-items: center; padding: 10px 16px; border-radius: 14px; border: 2px solid #ffb92e; color: #ffb92e; font-family: 'JetBrains Mono', monospace; line-height: 1.1; } .ds-stamp small { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; } .ds-stamp b { font-size: 1.35rem; margin-top: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Dhaka Rickshaw Scoreboard",
+    "overview": "This design system fuses the hand-painted enamel exuberance of Dhaka rickshaw back-plates with the tabular precision of a live competitive-programming scoreboard. Set on a deep nocturnal ink-violet ground (#0e0b15), the interface uses four saturated enamel pigments—marigold, vermilion, peacock teal, and lotus magenta—as structural plates, geometric garlands, and spoked-wheel dividers rather than scattered neon glows.\n\nEvery decorative motif earns its keep by framing real engineering proof: live contest ratings from Codeforces, CodeChef, and LeetCode sit above the fold in a tabular scoreboard; professionally graded skills are organized into four enamel ledgers with 5-segment proficiency bars (Core, Production, Working); and each shipped project opens into a full case-study plate. It explicitly rejects the generic dark-mode SaaS template of purple-to-cyan gradient text, blurred neon box-shadows, and tiny uppercase kicker chips above headings.",
+    "keyCharacteristics": [
+      "Nocturnal ink-violet canvas (#0e0b15) with warm cream lettering (#f7eddb) and four opaque enamel accents.",
+      "Crisp 2px all-around enamel borders, geometric SVG garland dividers, and 20-spoke rickshaw wheel markers.",
+      "Expressive display headlines in Bricolage Grotesque paired with legible Figtree prose and tabular JetBrains Mono contest metrics.",
+      "Scroll-driven kinetic banners and physical entrance transforms that keep all text at 100% opacity at rest."
+    ],
+    "rules": [
+      {
+        "name": "The Opaque Enamel Rule",
+        "body": "Accent colors (#ffb92e, #ff4d2e, #1fd1bd, #ff4d94) are applied as solid fills, crisp 2px full-perimeter borders, or SVG geometric inlays—never as blurred chromatic drop-shadows or translucent radial spotlight halos.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dark-Ink-on-Enamel Rule",
+        "body": "Whenever a surface is filled with Marigold (#ffb92e), Vermilion (#ff4d2e), Teal (#1fd1bd), or Leaf Green (#7ee06a), foreground text and icons must switch to Midnight Ink (#0e0b15) to preserve crisp contrast.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Scoreboard Rule",
+        "body": "Every numeric rating, rank, contest count, delta (+78), and CGPA/GPA stamp is set in JetBrains Mono with font-variant-numeric: tabular-nums so digits align vertically across rows.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Kicker Rule",
+        "body": "Headings never carry a small uppercase eyebrow or pill chip above them; the heading itself leads the section, followed by the SVG garland divider beneath it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Neutral Shadow Rule",
+        "body": "All box-shadow declarations use pure black (rgba(0, 0, 0, ...)) with a positive vertical offset (10px–30px); zero-offset colored halos are never used.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep all page text at opacity: 1 at rest and use physical transforms (translateY, translateX, scale) with exponential ease-out (cubic-bezier(0.16, 1, 0.3, 1)) for scroll entrances.",
+      "Do pair every listed engineering skill with its 5-segment proficiency bar (Core 5/5, Production 4/5, Working 3/5) and concrete project or contest evidence.",
+      "Do use uniform 4-sided borders (2px solid) on cards and plates, and flat hairline dividers (1px solid) for rows inside a plate."
+    ],
+    "donts": [
+      "Don't place small uppercase kickers, eyebrows, or pill chips above h1, h2, or h3 headings.",
+      "Don't apply single-side accent borders (border-left: 4px), colored blurred box-shadow glows, or radial-gradient background spotlights.",
+      "Don't nest bordered cards inside bordered cards; use ledger rows with hairline dividers inside container plates.",
+      "Don't repeat the handle imranonweb across headings and body sections; keep it in the About introduction, platform profile links, and the required GitHub footer credit."
+    ]
+  }
+}

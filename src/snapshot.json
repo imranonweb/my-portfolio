@@ -1,0 +1,296 @@
+{
+  "codeforces": {
+    "rating": 966,
+    "peak": 994,
+    "title": "Newbie",
+    "peakTitle": "Newbie",
+    "contests": 18,
+    "solved": 155,
+    "history": [
+      {
+        "t": 1734281400000,
+        "rating": 355,
+        "prev": 0,
+        "name": "Codeforces Round 993 (Div. 4)",
+        "rank": 22456
+      },
+      {
+        "t": 1739119800000,
+        "rating": 580,
+        "prev": 355,
+        "name": "Codeforces Round 1003 (Div. 4)",
+        "rank": 26081
+      },
+      {
+        "t": 1744566600000,
+        "rating": 780,
+        "prev": 580,
+        "name": "Codeforces Round 1017 (Div. 4)",
+        "rank": 12621
+      },
+      {
+        "t": 1746463800000,
+        "rating": 820,
+        "prev": 780,
+        "name": "Codeforces Round 1023 (Div. 2)",
+        "rank": 9957
+      },
+      {
+        "t": 1751388600000,
+        "rating": 840,
+        "prev": 820,
+        "name": "Codeforces Round 1034 (Div. 3)",
+        "rank": 21460
+      },
+      {
+        "t": 1752771000000,
+        "rating": 854,
+        "prev": 840,
+        "name": "Codeforces Round 1037 (Div. 3)",
+        "rank": 18990
+      },
+      {
+        "t": 1755795000000,
+        "rating": 762,
+        "prev": 854,
+        "name": "Codeforces Round 1043 (Div. 3)",
+        "rank": 26130
+      },
+      {
+        "t": 1760719800000,
+        "rating": 840,
+        "prev": 762,
+        "name": "Codeforces Round 1059 (Div. 3)",
+        "rank": 11735
+      },
+      {
+        "t": 1760891700000,
+        "rating": 782,
+        "prev": 840,
+        "name": "Codeforces Round 1060 (Div. 2)",
+        "rank": 13169
+      },
+      {
+        "t": 1761670200000,
+        "rating": 850,
+        "prev": 782,
+        "name": "Codeforces Round 1062 (Div. 4)",
+        "rank": 12674
+      },
+      {
+        "t": 1768236600000,
+        "rating": 828,
+        "prev": 850,
+        "name": "Codeforces Round 1072 (Div. 3)",
+        "rank": 21080
+      },
+      {
+        "t": 1768755000000,
+        "rating": 953,
+        "prev": 828,
+        "name": "Codeforces Round 1074 (Div. 4)",
+        "rank": 6509
+      },
+      {
+        "t": 1769359800000,
+        "rating": 893,
+        "prev": 953,
+        "name": "Codeforces Round 1076 (Div. 3)",
+        "rank": 21675
+      },
+      {
+        "t": 1771175700000,
+        "rating": 936,
+        "prev": 893,
+        "name": "Codeforces Round 1080 (Div. 3)",
+        "rank": 11223
+      },
+      {
+        "t": 1771691700000,
+        "rating": 968,
+        "prev": 936,
+        "name": "Codeforces Round 1081 (Div. 2)",
+        "rank": 8094
+      },
+      {
+        "t": 1772125500000,
+        "rating": 975,
+        "prev": 968,
+        "name": "Codeforces Round 1083 (Div. 2)",
+        "rank": 7184
+      },
+      {
+        "t": 1772211000000,
+        "rating": 994,
+        "prev": 975,
+        "name": "Codeforces Round 1084 (Div. 3)",
+        "rank": 7558
+      },
+      {
+        "t": 1775321400000,
+        "rating": 966,
+        "prev": 994,
+        "name": "Codeforces Round 1090 (Div. 4)",
+        "rank": 12718
+      }
+    ]
+  },
+  "leetcode": {
+    "rating": 1422,
+    "peak": 1448,
+    "title": "Top 73%",
+    "contests": 2,
+    "solved": 14,
+    "breakdown": {
+      "easy": 12,
+      "medium": 2,
+      "hard": 0
+    },
+    "history": [
+      {
+        "t": 1752978600000,
+        "rating": 1448,
+        "name": "Weekly Contest 459",
+        "rank": 18160
+      },
+      {
+        "t": 1753583400000,
+        "rating": 1422,
+        "name": "Weekly Contest 460",
+        "rank": 17706
+      }
+    ]
+  },
+  "codechef": {
+    "rating": 1434,
+    "peak": 1434,
+    "title": "2★",
+    "division": 3,
+    "contests": 17,
+    "solved": 103,
+    "globalRank": 36973,
+    "countryRank": 806,
+    "history": [
+      {
+        "t": 1751414400000,
+        "rating": 947,
+        "prev": null,
+        "name": "Starters 193 (Rated)",
+        "rank": 9714
+      },
+      {
+        "t": 1759881600000,
+        "rating": 880,
+        "prev": 947,
+        "name": "Starters 207 (Rated)",
+        "rank": 25295
+      },
+      {
+        "t": 1760486400000,
+        "rating": 937,
+        "prev": 880,
+        "name": "Starters 208 (Rated)",
+        "rank": 20144
+      },
+      {
+        "t": 1761091200000,
+        "rating": 976,
+        "prev": 937,
+        "name": "Starters 209 (Rated)",
+        "rank": 14983
+      },
+      {
+        "t": 1761696000000,
+        "rating": 984,
+        "prev": 976,
+        "name": "Starters 210 (Rated)",
+        "rank": 17724
+      },
+      {
+        "t": 1762300800000,
+        "rating": 1066,
+        "prev": 984,
+        "name": "Starters 211 (Rated)",
+        "rank": 3901
+      },
+      {
+        "t": 1762905600000,
+        "rating": 1108,
+        "prev": 1066,
+        "name": "Starters 212 (Rated)",
+        "rank": 10363
+      },
+      {
+        "t": 1764720000000,
+        "rating": 1170,
+        "prev": 1108,
+        "name": "Starters 215 (Rated)",
+        "rank": 4013
+      },
+      {
+        "t": 1765324800000,
+        "rating": 1190,
+        "prev": 1170,
+        "name": "Starters 216 (Rated)",
+        "rank": 7091
+      },
+      {
+        "t": 1765929600000,
+        "rating": 1147,
+        "prev": 1190,
+        "name": "Starters 217 (Rated)",
+        "rank": 17673
+      },
+      {
+        "t": 1766534400000,
+        "rating": 1168,
+        "prev": 1147,
+        "name": "Starters 218 (Rated)",
+        "rank": 7302
+      },
+      {
+        "t": 1768348800000,
+        "rating": 1187,
+        "prev": 1168,
+        "name": "Starters 221 (Rated)",
+        "rank": 6595
+      },
+      {
+        "t": 1768953600000,
+        "rating": 1222,
+        "prev": 1187,
+        "name": "Starters 222 (Rated)",
+        "rank": 6533
+      },
+      {
+        "t": 1770163200000,
+        "rating": 1266,
+        "prev": 1222,
+        "name": "Starters 224 (Rated)",
+        "rank": 4830
+      },
+      {
+        "t": 1770768000000,
+        "rating": 1319,
+        "prev": 1266,
+        "name": "Starters 225 (Rated)",
+        "rank": 1647
+      },
+      {
+        "t": 1771372800000,
+        "rating": 1374,
+        "prev": 1319,
+        "name": "Starters 226",
+        "rank": 1467
+      },
+      {
+        "t": 1771977600000,
+        "rating": 1434,
+        "prev": 1374,
+        "name": "Starters 227 (Rated)",
+        "rank": 716
+      }
+    ]
+  },
+  "generatedAt": "2026-10-29T17:06:08.234Z"
+}
